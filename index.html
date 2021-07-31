@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newton's Quiz</title>
+    <link rel="stylesheet" href="quiz.css" />
+    <script src="quiz.js"></script>
+</head>
+
+<body>
+    <div class="main-div">
+        <div class="start-container">
+            <button class="start-button" onclick="showCondition()">Start Quiz</button>
+        </div>
+        <div class="condition-container" id="condition-container">
+            <div class="condition-header">
+                <h3>Rules of the Quiz</h3>
+            </div>
+            <div class="condition-body">
+                <ol>
+                    <li>You have some questions and 4 options for each.</li>
+                    <li>You have to select only one answer.</li>
+                    <li>Once you submit, the next question will appear automatically.</li>
+                    <li>You can't exit from the Quiz while you're playing.</li>
+                    <li>You'll get points on the basis of your correct answers.</li>
+                </ol>
+            </div>
+            <div class="condition-footer">
+                <button class="exit-button" onclick="location.reload()">Exit Quiz</button>
+                <button class="continue-button" onclick="startQuiz()">Continue</button>
+            </div>
+        </div>
+        <div class="quiz-container">
+            <div class="quiz-container-header">
+                <h3>Newton's Quiz Application</h3>
+            </div>
+            <div class="quiz-container-body">
+                <div class="question-part">
+                    <div class="question-number">
+                        <h3>Q<span id="question-number">0</span>.&nbsp</h3>
+                    </div>
+                    <div class="question">
+                        <h3 id="question">Question Sample</h3>
+                    </div>
+                </div>
+                <div class="options">
+                    <ul class="option-list">
+                        <li class="option">
+                            <label id="option1">Option1</label>
+                            <input type="radio" name="answer" id="answer1" class="answer-button" />
+                        </li>
+                        <li class="option">
+                            <label id="option2">Option2</label>
+                            <input type="radio" name="answer" id="answer2" class="answer-button" />
+                        </li>
+                        <li class="option">
+                            <label id="option3">Option3</label>
+                            <input type="radio" name="answer" id="answer3" class="answer-button" />
+                        </li>
+                        <li class="option">
+                            <label id="option4">Option4</label>
+                            <input type="radio" name="answer" id="answer4" class="answer-button" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="quiz-container-footer">
+                <div class="total-question">
+                    Question <strong id="present-question">1</strong> of <strong id="total-question">10</strong>
+                </div>
+                <div class="submit">
+                    <button class="submit-button" id="submit" onclick="submit()">Next</button>
+                </div>
+            </div>
+        </div>
+        <div class="score-container">
+            <h2>Congrats!!!</h2>
+            <h3>You've completed the Quiz.</h3>
+            <h3>Your score is <strong id="ontained-points">0</strong> out of <strong id="total-points">0</strong></h3>
+            <div class="score-container-button">
+                <button class="replay-button" onclick="showCondition()">Play Again</button>
+                <button class="ok-button" onclick="location.reload()">Quit</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
